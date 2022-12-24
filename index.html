@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="logo.png">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="font/font.css" rel="stylesheet">
+    <title>Fastart | 更快更好用 | Faster and Better</title>
+</head>
+
+<body>
+    <span id="background"></span>
+
+    <h1 id="NowTime"></h1>
+    <h1 id="NowData"></h1>
+    <script src="js/showtime.js"></script>
+
+    <form id="search" action="https://www.baidu.com/s" target="_blank">
+        <select id="select" onchange="change();">
+            <option value="https://www.baidu.com/s" name="wd" selected>baidu</option>
+            <option value="https://so.csdn.net/so/search" name="q">csdn</option>
+            <option value="https://cn.bing.com/search" name="q">bing</option>
+            <option value="https://fsoufsou.com/search" name="q">fsou</option>
+        <input type="search" id="wd" name="wd" autocomplete="off" autofocus="autofocus" 
+            placeholder="Fastart" onclick="startHitokoto();" ondblclick="document.getElementById('wd').value=''">
+        <input type="submit" id="submit" value="搜">
+    </form>
+    <script src="js/change.js"></script>
+
+    <p id="hitokoto">
+        <a href="#" id="hitokoto_text" target="_blank">加载中</a>
+        <br>
+        <a href="#" id="hitokoto_from" target="_blank">加载中</a>
+        <script src="js/showhitokoto.js"></script>
+    </p>
+
+    <footer>Version 0.01 Beta | By <a href="https://space.bilibili.com/2100193886" target="_blank">内卷计算器 </a></footer>
+        
+</body>
+
+</html>

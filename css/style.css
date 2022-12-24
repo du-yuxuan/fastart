@@ -1,0 +1,170 @@
+body {
+    background-image: url("https://tuapi.eees.cc/api.php?category=fengjing&type=302");
+    /* 
+    https://picsum.photos/300/200 
+    https://source.unsplash.com/random?nature 
+    https://tuapi.eees.cc/api.php?category=fengjing&type=302
+    https://api.dujin.org/bing/1920.php
+    */
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+#NowTime {
+    text-align: center;
+    font-size: calc(8vh);
+    margin: calc(6vh) 0 0 0;
+    font-family: "MiSans-Demibold";
+    color: white;
+    filter: drop-shadow(0 0 calc(0.75rem) rgb(0, 0, 0));
+    user-select: none;
+}
+
+#NowData {
+    text-align: center;
+    font-size: calc(3vh);
+    font-family: "MiSans-Normal";
+    color: white;
+    filter: drop-shadow(0 0 calc(0.75rem) rgb(0, 0, 0));
+    word-break: keep-all;
+    user-select: none;
+}
+
+#search {
+    display: flex;
+    margin-top: calc(8vh);
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(70vmin);
+    height: calc(8vh);
+    background-color: white;
+    border-radius: 25px;
+
+    filter: drop-shadow(0 0 calc(0.5rem) rgb(0, 0, 0));
+
+    transition: filter 0.5s, width 0.5s, height 0.5s, font-size 0.5s, margin-top 0.5s;
+}
+
+#search:focus-within {
+    outline: none;
+    filter: drop-shadow(0 0 calc(3rem) rgb(0, 0, 0));
+    width: calc(90vmin);
+}
+
+#search:focus-within>#wd {
+    width: calc(66vmin);
+    font-size: calc(4vh);
+}
+
+
+#search:focus-within>#submit {
+    filter: drop-shadow(0 0 calc(1.5rem) rgb(0, 0, 0));
+    font-size: calc(4.8vh);
+}
+
+#search:focus-within>#select {
+    font-size: calc(2.5vh);
+    filter: drop-shadow(0 0 calc(1.5rem) rgb(0, 0, 0));
+}
+
+#wd {
+    width: calc(46vmin);
+    height: calc(8vh);
+    outline: none;
+    font-family: "Misans-Regular";
+    font-size: calc(3vh);
+    text-align: center;
+    align-items: center;
+    border-style: hidden;
+    background-color: transparent;
+
+    transition: width 0.5s, font-size 0.5s;
+}
+
+#submit {
+    height: calc(8vh);
+    width: calc(12vmin);
+    font-family: "Misans-Bold";
+    font-size: calc(4vh);
+    border-radius: 25px;
+    background-color: transparent;
+    outline: none;
+    border-style: hidden;
+    filter: 0;
+
+    transition: font-size 0.5s, filter 0.5s;
+}
+
+#select {
+    text-align: center;
+    align-items: center;
+    height: calc(8vh);
+    width: calc(12vmin);
+    font-size: calc(2vh);
+    font-family: "Misans-Bold";
+    background-color: transparent;
+    border-radius: 25px;
+    border-style: hidden;
+    appearance: none;
+    filter: 0;
+
+    transition: font-size 0.5s, filter 0.5s;
+}
+
+#select:focus {
+    border-style: hidden;
+    outline: none;
+}
+
+input::-webkit-search-cancel-button {
+    display: none;
+}
+
+#hitokoto {
+    position: fixed;
+    bottom: calc(13vh);
+    left: 0;
+    right: 0;
+    text-align: center;
+    transition: bottom 0.9s;
+}
+
+#hitokoto_text {
+    font-size: calc(2.5vh);
+    font-family: "MiSans-Bold";
+    color: white;
+    filter: drop-shadow(0 0 calc(0.75rem) rgb(0, 0, 0));
+    user-select: none;
+    word-break: keep-all;
+    text-decoration: none;
+}
+
+#hitokoto_from {
+    font-size: calc(2vh);
+    font-family: "MiSans-Semibold";
+    color: white;
+    filter: drop-shadow(0 0 calc(0.75rem) rgb(0, 0, 0));
+    user-select: none;
+    word-break: keep-all;
+    text-decoration: none;
+}
+
+footer {
+    font-family: "MiSans-Semibold";
+    position: absolute;
+    bottom: calc(0.5vh);
+    right: 0;
+    left: 0;
+    text-align: center;
+    font-size: calc(2vh);
+    color: white;
+    filter: drop-shadow(0 0 calc(0.75rem) rgb(0, 0, 0));
+}
+
+footer > a {
+    font-family: "MiSans-Semibold";
+    color: rgb(170, 170, 170);
+    filter: drop-shadow(0 0 calc(0.75rem) rgb(0, 0, 0));
+    text-decoration: 0;
+}
