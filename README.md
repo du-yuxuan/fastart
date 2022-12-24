@@ -3,9 +3,9 @@
 Fastart | Faster and Better | 更快更好用（相比梧桐起始页） | version 0.01 Beta  
 
 ## 关于我 | About me
-fastart [https://du-yuxuan.github.io/fastart/](https://du-yuxuan.github.io/fastart/)
-Bilibili [https://space.bilibili.com/2100193886](https://space.bilibili.com/2100193886)
-csdn [https://blog.csdn.net/weixin_53024080](https://blog.csdn.net/weixin_53024080)
+fastart [https://du-yuxuan.github.io/fastart/](https://du-yuxuan.github.io/fastart/)  
+Bilibili [https://space.bilibili.com/2100193886](https://space.bilibili.com/2100193886)  
+csdn [https://blog.csdn.net/weixin_53024080](https://blog.csdn.net/weixin_53024080)  
 
 ## 更新日志 | Update log
 + 0.01 beta  时间 一言 背景自动切换
