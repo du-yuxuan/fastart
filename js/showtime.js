@@ -22,7 +22,7 @@ function startTime() {
     if (today.getDay() == 5) day = "星期五 "
     if (today.getDay() == 6) day = "星期六 "
 
-    document.getElementById("NowData").innerHTML = yyyy + "-" + MM + "-" + dd + " " + day;
+    document.getElementById("NowDate").innerHTML = yyyy + "-" + MM + "-" + dd + " " + day;
     document.getElementById("NowTime").innerHTML = hh + ":" + mm + ":" + ss;
 
     setTimeout('startTime()', 100);

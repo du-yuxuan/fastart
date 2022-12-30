@@ -4,18 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
     <link rel="shortcut icon" href="logo.png">
     <link href="css/style.css" rel="stylesheet">
     <link href="font/font.css" rel="stylesheet">
     <title>Fastart | 更快更好用 | Faster and Better</title>
 </head>
 
-<body>
-    <span id="background"></span>
-
+<body id="body">
     <h1 id="NowTime"></h1>
-    <h1 id="NowData"></h1>
+    <h1 id="NowDate"></h1>
     <script src="js/showtime.js"></script>
 
     <form id="search" action="https://www.baidu.com/s" target="_blank">
@@ -24,21 +22,63 @@
             <option value="https://so.csdn.net/so/search" name="q">csdn</option>
             <option value="https://cn.bing.com/search" name="q">bing</option>
             <option value="https://fsoufsou.com/search" name="q">fsou</option>
-        <input type="search" id="wd" name="wd" autocomplete="off" autofocus="autofocus" 
-            placeholder="Fastart" onclick="startHitokoto();" ondblclick="document.getElementById('wd').value=''">
-        <input type="submit" id="submit" value="搜">
+        </select>
+        <input type="search" id="wd" name="wd" autocomplete="off" autofocus="autofocus" placeholder="start" onclick="startHitokoto();">
+        <input type="submit" id="submit" value="搜" onclick="return true;document.getElementById('wd').value='';">
     </form>
     <script src="js/change.js"></script>
 
     <p id="hitokoto">
-        <a href="#" id="hitokoto_text" target="_blank"></a>
-        <br>
-        <a href="#" id="hitokoto_from" target="_blank"></a>
+        <a href="#" id="hitokoto_text" target="_blank">加载中</a>
+        <a href="#" id="hitokoto_from" target="_blank">加载中</a>
         <script src="js/showhitokoto.js"></script>
     </p>
 
-    <footer>Version 0.01 Beta | By <a href="https://space.bilibili.com/2100193886" target="_blank">内卷计算器 </a></footer>
-        
+    <footer id="footer"> Version 0.02 Beta | By <a href="https://space.bilibili.com/2100193886" target="_blank">内卷计算器</a></footer>
+
+    <script>
+        console.log(window.screen.availWidth);
+        console.log(window.screen.availHeight);
+        function load() {
+            if (window.screen.availWidth < 800) {
+                document.getElementById("wd").style.width = window.screen.availWidth - 280 + "px";
+                document.getElementById("search").style.width = window.screen.availWidth - 80 + "px";
+            }
+            else if (window.screen.availWidth < 1300){
+                document.getElementById("wd").style.width = window.screen.availWidth - 700 + "px";
+                document.getElementById("search").style.width = window.screen.availWidth - 500 + "px";
+            }
+            else
+            {
+                document.getElementById("wd").style.width = "400px";
+                document.getElementById("search").style.width = "600px";
+            }
+            if (window.screen.availHeight < 700) {
+                document.getElementById("hitokoto_text").style.display = "none";
+                document.getElementById("hitokoto_from").style.display = "none";
+            }
+            else
+            {
+                document.getElementById("hitokoto_text").style.display = "block";
+                document.getElementById("hitokoto_from").style.display = "block";
+            }
+            if (window.screen.availHeight < 300) {
+                document.getElementById("NowDate").style.display = "none";
+                document.getElementById("search").style.marginTop = "40px";
+                document.getElementById("footer").style.display = "none";
+            }
+            else
+            {
+                document.getElementById("NowDate").style.display = "block";
+                document.getElementById("search").style.marginTop = "60px";
+                document.getElementById("footer").style.display = "block";
+            }
+
+            setTimeout("load()",300);
+        }
+        load();
+    </script>
+
 </body>
 
 </html>
