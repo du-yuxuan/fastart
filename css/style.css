@@ -1,7 +1,7 @@
 :root {
     user-select: none;
     overflow: hidden;
-    background: url("https://api.dujin.org/bing/1920.php") no-repeat;
+    background: url("https://tuapi.eees.cc/api.php?category=fengjing&type=302") no-repeat;
     background-size: cover;
     width: 100%;
     height: 100%;
