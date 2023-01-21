@@ -1,49 +1,49 @@
 @font-face {
     font-family: MiSans-Bold;
-    src: url("MiSans-Bold.ttf");
+    src: url("MiSans-Bold.woff");
 }
 
 @font-face {
     font-family: MiSans-Demibold;
-    src: url("MiSans-Demibold.ttf");
+    src: url("MiSans-Demibold.woff");
 }
 
 @font-face {
     font-family: MiSans-ExtraLight;
-    src: url("MiSans-ExtraLight.ttf");
+    src: url("MiSans-ExtraLight.woff");
 }
 
 @font-face {
     font-family: MiSans-Heavy;
-    src: url("MiSans-Heavy.ttf");
+    src: url("MiSans-Heavy.woff");
 }
 
 @font-face {
     font-family: MiSans-Light;
-    src: url("MiSans-Light.ttf");
+    src: url("MiSans-Light.woff");
 }
 
 @font-face {
     font-family: MiSans-Medium;
-    src: url("MiSans-Medium.ttf");
+    src: url("MiSans-Medium.woff");
 }
 
 @font-face {
     font-family: MiSans-Normal;
-    src: url("MiSans-Normal.ttf");
+    src: url("MiSans-Normal.woff");
 }
 
 @font-face {
     font-family: MiSans-Regular;
-    src: url("MiSans-Regular.ttf");
+    src: url("MiSans-Regular.woff");
 }
 
 @font-face {
     font-family: MiSans-Semibold;
-    src: url("MiSans-Semibold.ttf");
+    src: url("MiSans-Semibold.woff");
 }
 
 @font-face {
     font-family: MiSans-Thin;
-    src: url("MiSans-Thin.ttf");
+    src: url("MiSans-Thin.woff");
 }

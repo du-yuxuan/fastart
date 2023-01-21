@@ -8,8 +8,8 @@ function startTime() {
     var mm = today.getMinutes();
     var ss = today.getSeconds();
 
-    MM = checkTime(MM);
-    dd = checkTime(dd);
+    // MM = checkTime(MM);
+    // dd = checkTime(dd);
     mm = checkTime(mm);
     ss = checkTime(ss);
 
@@ -22,8 +22,8 @@ function startTime() {
     if (today.getDay() == 5) day = "星期五 "
     if (today.getDay() == 6) day = "星期六 "
 
-    document.getElementById("NowDate").innerHTML = yyyy + "-" + MM + "-" + dd + " " + day;
-    document.getElementById("NowTime").innerHTML = hh + ":" + mm + ":" + ss;
+    document.getElementById("NowDate").innerHTML = MM + "月" + dd + "日 " + day;
+    document.getElementById("NowTime").innerHTML = hh + ":" + mm;
 
     setTimeout('startTime()', 100);
 }

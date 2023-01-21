@@ -5,80 +5,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
-    <link rel="shortcut icon" href="logo.png">
+	<meta name="baidu-site-verification" content="codeva-UZHxiDwYJu" />    
+	<link rel="shortcut icon" href="logo.png">
     <link href="css/style.css" rel="stylesheet">
     <link href="font/font.css" rel="stylesheet">
     <title>Fastart | 更快更好用 | Faster and Better</title>
 </head>
 
 <body id="body">
-    <h1 id="NowTime"></h1>
-    <h1 id="NowDate"></h1>
+    <div id="banner">
+        <div id=" drop-shadow">
+            <div id="glass"></div>
+        </div>
+    </div>
+
+    <p id="NowTime"></p>
+    <p id="NowDate"></p>
     <script src="js/showtime.js"></script>
 
-    <form id="search" action="https://www.baidu.com/s" target="_blank">
-        <select id="select" onchange="change();">
+    <form id="search" onsubmit="link()" target="_blank">
+        <select id="select">
             <option value="https://www.baidu.com/s" name="wd" selected>baidu</option>
             <option value="https://so.csdn.net/so/search" name="q">csdn</option>
             <option value="https://cn.bing.com/search" name="q">bing</option>
             <option value="https://fsoufsou.com/search" name="q">fsou</option>
         </select>
-        <input type="search" id="wd" name="wd" autocomplete="off" autofocus="autofocus" placeholder="start" onclick="startHitokoto();">
-        <input type="submit" id="submit" value="搜" onclick="return true;document.getElementById('wd').value='';">
+        <input type="text" id="wd" autocomplete="off" autofocus="autofocus" placeholder="Fastart"
+            onfocus="startHitokoto();">
+        <input type="submit" id="submit" value="搜">
     </form>
-    <script src="js/change.js"></script>
+    <script src="js/search.js"></script>
 
     <p id="hitokoto">
         <a href="#" id="hitokoto_text" target="_blank">加载中</a>
         <a href="#" id="hitokoto_from" target="_blank">加载中</a>
-        <script src="js/showhitokoto.js"></script>
     </p>
+    <script src="js/showhitokoto.js"></script>
 
-    <footer id="footer"> Version 0.02 Beta | By <a href="https://space.bilibili.com/2100193886" target="_blank">内卷计算器</a></footer>
+    <footer id="footer"> Version 0.03 Beta | By <a href="https://space.bilibili.com/2100193886"
+            target="_blank">内卷计算器</a></footer>
 
     <script>
         console.log(window.screen.availWidth);
-        console.log(window.screen.availHeight);
+        console.log(window.innerHeight);
         function load() {
-            if (window.screen.availWidth < 800) {
-                document.getElementById("wd").style.width = window.screen.availWidth - 280 + "px";
-                document.getElementById("search").style.width = window.screen.availWidth - 80 + "px";
+            console.log(window.innerHeight);
+            document.getElementById("hitokoto_text").style.display = "block";
+            document.getElementById("hitokoto_from").style.display = "block";
+            document.getElementById("NowDate").style.display = "block";
+            document.getElementById("NowTime").style.marginTop = "60px";
+            document.getElementById("footer").style.display = "block";
+            document.getElementById("search").style.marginTop = "50px";
+            if (window.innerHeight < 700) {
+                document.getElementById("search").style.marginTop = "10px";
             }
-            else if (window.screen.availWidth < 1300){
-                document.getElementById("wd").style.width = window.screen.availWidth - 700 + "px";
-                document.getElementById("search").style.width = window.screen.availWidth - 500 + "px";
-            }
-            else
-            {
-                document.getElementById("wd").style.width = "400px";
-                document.getElementById("search").style.width = "600px";
-            }
-            if (window.screen.availHeight < 700) {
-                document.getElementById("hitokoto_text").style.display = "none";
+            if (window.innerHeight < 500) {
                 document.getElementById("hitokoto_from").style.display = "none";
+                document.getElementById("hitokoto_text").style.display = "none";
             }
-            else
-            {
-                document.getElementById("hitokoto_text").style.display = "block";
-                document.getElementById("hitokoto_from").style.display = "block";
-            }
-            if (window.screen.availHeight < 300) {
+            if (window.innerHeight < 300) {
                 document.getElementById("NowDate").style.display = "none";
-                document.getElementById("search").style.marginTop = "40px";
+                document.getElementById("NowTime").style.marginTop = "10px";
                 document.getElementById("footer").style.display = "none";
             }
-            else
-            {
-                document.getElementById("NowDate").style.display = "block";
-                document.getElementById("search").style.marginTop = "60px";
-                document.getElementById("footer").style.display = "block";
-            }
-
-            setTimeout("load()",300);
+            setTimeout("load()", 100);
         }
         load();
-    </script>
 
+    </script>
 </body>
 
 </html>

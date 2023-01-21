@@ -1,10 +1,6 @@
 :root {
     user-select: none;
     overflow: hidden;
-    background: url("https://tuapi.eees.cc/api.php?category=fengjing&type=302") no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
     /* 
     https://picsum.photos/300/200 
     https://source.unsplash.com/random?nature 
@@ -13,13 +9,59 @@
     */
 }
 
+#banner {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url("https://api.dujin.org/bing/1920.php") no-repeat center center;
+    background-position: center;
+    background-size: cover;
+    filter: brightness(90%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#glass {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url("https://api.dujin.org/bing/1920.php") no-repeat center center;
+    background-size: cover;
+    filter: blur(3px) brightness(90%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: filter 0.3s;
+}
+
+#drop-shadow {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    filter: drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.5));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #NowTime {
     text-align: center;
-    font-size: 54px;
-    margin: 30px 0 0 0;
-    font-family: "MiSans-Demibold";
+    font-size: 56px;
+    margin: 60px 0 0 0;
+    font-family: "MiSans-Bold";
     color: white;
-    filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
+    filter: drop-shadow(0 0 10px rgb(0, 0, 0));
     user-select: none;
 
     transition: font-size 0.5s;
@@ -27,81 +69,134 @@
 
 #NowDate {
     text-align: center;
-    font-size: 28px;
-    font-family: "MiSans-Normal";
-    color: white;
-    filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
+    font-size: 27px;
+    font-family: "MiSans-Demibold";
+    filter: drop-shadow(0 0 10px rgb(0, 0, 0));
     word-break: keep-all;
     user-select: none;
+    color: white;
+    margin-top: -5px;
 
     transition: font-size 0.5s;
 }
 
 #search {
     display: flex;
-    margin-top: 60px;
+    margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
-    width: 600px;
+    width: 140px;
     height: 50px;
     align-items: center;
-    background-color: white;
+    background-color: transparent;
     border-radius: 25px;
 
-    filter: drop-shadow(0 0 0.5rem rgb(0, 0, 0));
-
-    transition: width 0.5s, font-size 0.5s, margin-top 0.5s;
+    transition: width 0.3s, font-size 0.3s, margin-top 0.3s, height 0.3s;
 }
 
 #wd {
-    width: 400px;
+    color: rgba(0, 0, 0, 0);
+    width: 140px;
     height: 50px;
     outline: none;
-    font-family: "Misans-Regular";
-    font-size: 30px;
+    font-family: "Misans-Medium";
+    font-size: 20px;
     text-align: center;
     align-items: center;
     border-style: hidden;
     border-radius: 25px;
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.5);
 
-    transition: background-color 0.5s;
+    transition: width 0.3s, height 0.3s, color 0.3s, background-color 0.3s, border-radius 0.3s;
 }
 
+
 #submit {
+    color: black;
     text-align: center;
     height: 50px;
-    width: 100px;
+    width: 0px;
     font-family: "Misans-Bold";
-    font-size: 40px;
-    border-radius: 25px;
-    background-color: transparent;
+    font-size: 30px;
+    border-radius: 0 25px 25px 0;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0);
     outline: none;
     border-style: hidden;
-    filter: 0;
+
+    transition: width 0.3s, height 0.3s, background-color 0.3s, color 0.3s;
 }
 
 #select {
+    color: black;
     text-align: center;
     height: 50px;
-    width: 100px;
+    width: 0px;
     font-size: 20px;
     font-family: "Misans-Bold";
-    background-color: transparent;
-    border-radius: 25px;
+    border-radius: 25px 0 0 25px;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0);
     border-style: hidden;
     appearance: none;
-    filter: 0;
 
-    transition: background-color 0.5s;
+    transition: width 0.3s, height 0.3s, background-color 0.3s, color 0.3s;
+}
+
+#search:hover {
+    outline: none;
+    width: calc(140px + 140px + 5vw);
+}
+
+#search:hover>#select {
+    width: 70px;
+    background-color: rgba(43, 43, 43, 0.8);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#search:hover>#submit {
+    width: 70px;
+    background-color: rgba(43, 43, 43, 0.8);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#search:hover>#wd {
+    width: calc(140px + 5vw);
+    border-radius: 3px;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(43, 43, 43, 0.8);
 }
 
 #search:focus-within {
     outline: none;
-    margin-top: 50px;
+    width: calc(140px + 140px + 10vw - 8vh);
+}
+
+#search:focus-within>#select {
+    width: 70px;
+    background-color: rgb(43, 43, 43);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#search:focus-within>#submit {
+    width: 70px;
+    background-color: rgb(43, 43, 43);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#search:focus-within>#wd {
+    width: calc(140px + 10vw - 8vh);
+    border-radius: 0;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: rgb(43, 43, 43);
 }
 
 #select:focus {
+    border-style: hidden;
+    outline: none;
+}
+
+#select:hover {
     border-style: hidden;
     outline: none;
 }
@@ -119,7 +214,7 @@
     font-size: 18px;
     font-family: "MiSans-Bold";
     color: white;
-    filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
+    filter: drop-shadow(0 0 10px rgb(0, 0, 0));
     user-select: none;
     word-break: keep-all;
     text-decoration: none;
@@ -129,7 +224,7 @@
     font-size: 15px;
     font-family: "MiSans-Semibold";
     color: white;
-    filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
+    filter: drop-shadow(0 0 10px rgb(0, 0, 0));
     user-select: none;
     word-break: keep-all;
     text-decoration: none;
@@ -138,18 +233,17 @@
 footer {
     font-family: "MiSans-Semibold";
     position: absolute;
-    bottom: 5px;
+    bottom: 10px;
     right: 0;
     left: 0;
     text-align: center;
     font-size: 15px;
     color: white;
-    filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
+    filter: drop-shadow(0 0 10px rgb(0, 0, 0));
 }
 
 footer>a {
     font-family: "MiSans-Semibold";
-    color: rgb(170, 170, 170);
-    filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
+    color: white;
     text-decoration: 0;
 }
