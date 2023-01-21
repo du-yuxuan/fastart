@@ -12,6 +12,7 @@ Fastart | Faster and Better | 更快更好用 |  version 0.03 Beta
 | Cloudflare  | Cloudflare    | [fastart.pages.dev](https://fastart.pages.dev)               | 164ms （75% 丢失） |            |
 | Github Page | Github Page   | [du-yuxuan.github.io/fastart](https://du-yuxuan.github.io/fastart) | 75ms               | 不稳定     |
 | Vercel      | Vercel        | [fastart.vercel.app](https://fastart.vercel.app)             | 100% 丢失          |            |
+
 注意：测试数据为中国境内未开vpn测试，仅供参考
 
 ## 关于我 | About me
